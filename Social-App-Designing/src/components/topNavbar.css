@@ -1,0 +1,78 @@
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(9, 157, 243);
+  color: #ffffff;
+  padding: 10px;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+}
+.searchbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px 5px;
+  width: 500px;
+  height: 30px;
+  border: 1px solid gainsboro;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.searchbar i {
+  font-size: small;
+  padding: 0px 3px;
+  color: gray;
+}
+.searchInput {
+  width: 480px;
+  border: 0px;
+  height: 18px;
+  padding: 0px 3px;
+}
+.searchInput:focus {
+  outline: none;
+}
+.navLogo {
+  width: 130px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.login {
+  font-weight: bolder;
+  color: azure;
+  border: 2px solid azure;
+  padding: 3px;
+}
+.navLogo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+.navFonts {
+  display: flex;
+  justify-content: flex-end;
+  height: 20px;
+  width: 150px;
+}
+.navFonts i {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.navFonts span {
+  position: relative;
+  top: -9px;
+  left: -6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+}

@@ -1,0 +1,15 @@
+.top-profile {
+  display: flex;
+}
+.profileside {
+  flex: 9;
+}
+.profilebottom {
+  display: flex;
+}
+.profilecontent {
+  flex: 7;
+}
+.profileright {
+  flex: 2.2;
+}

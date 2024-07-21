@@ -1,0 +1,27 @@
+.rightBar {
+  flex: 3;
+  padding: 20px;
+  padding-left: 0px;
+}
+.right-top img {
+  object-fit: cover;
+  width: 90px;
+  height: 70px;
+  padding-right: 18px;
+}
+.right-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.party-img img {
+  padding-top: 8px;
+  width: 100%;
+  border-radius: 17px;
+}
+.online-title {
+  color: rgb(29, 207, 29);
+  text-shadow: 4px 4px 6px rgb(103, 192, 61);
+  padding: 40px 0;
+  padding-bottom: 0px;
+}

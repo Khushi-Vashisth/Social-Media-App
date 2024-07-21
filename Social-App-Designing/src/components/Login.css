@@ -1,0 +1,69 @@
+.loginbox {
+  background-color: rgb(197, 196, 196);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginsection {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logintitle h1 {
+  color: rgb(24, 136, 211);
+  font-size: 3em;
+  /* font-weight: 700; */
+  box-shadow: 5px 5px 5px rgb(101, 172, 212);
+  border: 2px solid rgb(190, 189, 189);
+}
+.logintitle h3 {
+  font-size: 62rm;
+  color: rgb(54, 54, 54);
+  font-family: monospace;
+}
+
+.logInputs {
+  padding: 50px 20px;
+  background-color: rgb(223, 220, 220);
+  border: 1px solid rgb(184, 185, 185);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input {
+  padding: 10px;
+  margin: 8px;
+  height: 37px;
+  width: 340px;
+  border-radius: 8px;
+  border: 1px solid grey;
+}
+input:focus {
+  outline: none;
+}
+.button {
+  margin: 14px;
+  height: 34px;
+  width: 340px;
+  border: 1px solid green;
+  background-color: green;
+  color: white;
+  border-radius: 8px;
+}
+.button2 {
+  margin: 14px;
+  height: 40px;
+  width: 340px;
+  border: 1px solid blue;
+  background-color: blue;
+  color: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+.forget {
+  color: rgb(19, 164, 221);
+}
