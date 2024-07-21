@@ -30,7 +30,7 @@ route.post("/login", async (req, res) => {
   try {
     //Email invalid
     const user = await User.findOne({ email: req.body.email });
-    if (!user) return res.status(404).send("User not found");
+    if (!user) return res.status(404).json("User not found");
 
     //Password incorrect
     const isValidPassword = await bcrypt.compare(
