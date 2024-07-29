@@ -10,8 +10,8 @@
 .myprofile {
   height: 200px;
   width: 200px;
-  border: 6px solid #1f1d1e;
-  box-shadow: 5px 6px 6px #a1041e;
+  border: 1px solid #aaa2a5;
+  /* box-shadow: 5px 6px 6px #a1041e; */
   border-radius: 50%;
   object-fit: cover;
   object-position: center;

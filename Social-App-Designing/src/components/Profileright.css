@@ -3,6 +3,7 @@
   border: 2px solid rgb(216, 215, 215);
   padding: 10px;
   border-radius: 8px;
+  box-shadow: 4px 4px 3px rgb(199, 196, 196);
 }
 .info h3 {
   padding: 10px 0px;
@@ -13,6 +14,7 @@
 }
 .rightprofile {
   padding: 10px 0px;
+  padding-right: 20px;
 }
 .listfollowing {
   padding: 26px 10px;
@@ -29,10 +31,30 @@
 }
 .list1,
 .list2,
-.list3 {
+.list3,
+.listUser {
   display: flex;
   flex-direction: row;
 }
+.usernew {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 0px;
+  border: 1px solid rgb(185, 173, 173);
+  box-shadow: 3px 3px 5px rgb(187, 186, 186);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userimg {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
 .Followlist {
   color: red;
   text-shadow: 3px 3px 4px tomato;
@@ -43,7 +65,10 @@
 .user3,
 .user4,
 .user5,
-.user6 {
+.user6,
+.user7,
+.user8,
+.user9 {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -55,6 +80,9 @@
 .user3,
 .user4,
 .user5,
-.user6 h4 {
+.user6,
+.user7,
+.user8,
+.user9 h4 {
   color: tomato;
 }

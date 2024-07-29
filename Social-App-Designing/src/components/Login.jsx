@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./Login.css";
+import { LoginCall } from "../ApiCalls";
+import { AuthContext } from "../context/authContext";
 import { Link } from "react-router-dom";
-function Login() {
-  let [isclick, setisclick] = useState(false);
 
-  let HandleClick = () => {
-    setisclick(!isclick);
+function Login() {
+  const email = useRef();
+  const password = useRef();
+  const { user, isFetching, error, dispatch } = useContext(AuthContext);
+  const [click, setClick] = useState(false);
+  let Handleclick = () => {
+    setClick(!click);
   };
+
+  let HandleClick = (e) => {
+    e.preventDefault();
+    // console.log(email.current.value);
+    LoginCall(
+      { email: email.current.value, password: password.current.value },
+      dispatch
+    );
+  };
+  console.log(user);
   return (
     <div className="loginbox">
       <div className="loginsection">
@@ -15,37 +30,38 @@ function Login() {
           <br />
           <h3>
             <b>
-              {" "}
+              {"     "}
               Connect with your Friends and Relatives <br /> only on ChillDose
             </b>
           </h3>
         </div>
-        <div className="logInputs">
+        <form className="logInputs" onSubmit={HandleClick}>
           <input
             type="email"
-            name=""
             className="input"
             placeholder="Email"
+            ref={email}
             required
             aria-required
           />
           <input
             type="password"
-            name=""
-            id=""
             className="input"
             placeholder="Password"
+            minLength="6"
+            ref={password}
             required
           />
-          <button className="button" type="submit">
-            Log in
+          <button className="button" type="submit" disabled={isFetching}>
+            {isFetching ? "loading" : "Log in"}
           </button>
 
           <h5 className="forget">Forget Password ?</h5>
-          <button type="submit" className="button2">
-            Create new Account
-          </button>
-        </div>
+
+          <Link to="/register" onSubmit={Handleclick}>
+            <button className="button2">Create new Account</button>
+          </Link>
+        </form>
       </div>
     </div>
   );

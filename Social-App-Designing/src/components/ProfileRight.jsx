@@ -1,67 +1,69 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Profileright.css";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
-const ProfileRight = () => {
+const ProfileRight = ({ user }) => {
+  const [friends, setfriends] = useState([]);
+
+  useEffect(() => {
+    const getFriends = async () => {
+      try {
+        const ApiUrl = import.meta.env.VITE_API_URL;
+        const friendList = await axios.get(`${ApiUrl}user/friends/${user._id}`);
+        setfriends(friendList.data);
+        console.log(friendList.data, "friend data");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getFriends();
+  });
+
   return (
     <div className="rightprofile">
       <div className="info">
-        <h3>User Information :</h3>
+        <h3>user Information :</h3>
         <p>
-          <b>Name: </b>Khushi Dhiman
+          <b>Name: </b>
+          {user.username || "none"}
         </p>
         <p>
           <b>Age: </b>18
         </p>
         <p>
-          <b>Qualifications: </b>Diploma Holder
+          <b>Relationship status: </b>
+          {user.relationship || "none"}
         </p>
         <p>
-          <b>City: </b> Panipat
+          <b>Qualifications: </b>Graduation
+        </p>
+        <p>
+          <b>City: </b> {user.city || "none"}
         </p>
       </div>
       <div className="listfollowing">
         <h1 className="Followlist">Following List</h1>
-        <div className="list1">
-          <div className="user1">
-            <span className="following">
-              <img src="/assets/profile.jpg" alt="" />
+
+        <div className="listUser">
+          {friends.map((friend) => (
+            <span className="usernew">
+              <Link to={`/profile/${friend.username}`}>
+                <span className="following">
+                  <img
+                    className="userimg"
+                    src={
+                      friend.profilePicture
+                        ? friend.profilePicture
+                        : "/assets/noprofile.jpg"
+                    }
+                    alt="profile"
+                  />
+                </span>
+                <span className="username__">{friend.username}</span>
+              </Link>
             </span>
-            <h4>Nobita Nuhara</h4>
-          </div>
-          <div className="user2">
-            <span className="following">
-              <img src="/assets/profile2.jpg" alt="" />
-            </span>
-            <h4>Sizuka Marathi</h4>
-          </div>
-        </div>
-        <div className="list2">
-          <div className="user3">
-            <span className="following">
-              <img src="/assets/profile3.jpg" alt="" />
-            </span>
-            <h4>Denmark Laho</h4>
-          </div>
-          <div className="user4">
-            <span className="following">
-              <img src="/assets/profile4.jpg" alt="" />
-            </span>
-            <h4>Doraemon </h4>
-          </div>
-        </div>
-        <div className="list3">
-          <div className="user5">
-            <span className="following">
-              <img src="/assets/profile5.jpg" alt="" />
-            </span>
-            <h4>Ninja Hataori</h4>
-          </div>
-          <div className="user6">
-            <span className="following">
-              <img src="/assets/profile7.jpg" alt="" />
-            </span>
-            <h4>Miss Oxford</h4>
-          </div>
+          ))}
         </div>
       </div>
     </div>

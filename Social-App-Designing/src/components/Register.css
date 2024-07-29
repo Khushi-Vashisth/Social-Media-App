@@ -1,4 +1,4 @@
-.loginbox {
+.Registerbox {
   background-color: rgb(197, 196, 196);
   height: 100vh;
   width: 100%;
@@ -6,26 +6,26 @@
   justify-content: center;
   align-items: center;
 }
-.loginsection {
+.Registersection {
   width: 65%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logintitle h1 {
+.Registertitle h1 {
   color: rgb(24, 136, 211);
   font-size: 3em;
   /* font-weight: 700; */
   box-shadow: 5px 5px 5px rgb(101, 172, 212);
   border: 2px solid rgb(190, 189, 189);
 }
-.logintitle h3 {
+.Registertitle h3 {
   font-size: 62rm;
   color: rgb(54, 54, 54);
   font-family: monospace;
 }
 
-.logInputs {
+.RegisterInputs {
   padding: 50px 20px;
   background-color: rgb(223, 220, 220);
   border: 1px solid rgb(170, 168, 168);
@@ -41,7 +41,7 @@
   border-radius: 0;
   color: white;
 }
-.input {
+.Registerinput {
   padding: 10px;
   margin: 8px;
   height: 37px;
@@ -70,7 +70,4 @@ input:focus {
   color: white;
   border-radius: 8px;
   padding: 10px;
-}
-.forget {
-  color: rgb(19, 164, 221);
 }
