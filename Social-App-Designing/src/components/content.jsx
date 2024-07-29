@@ -88,6 +88,15 @@ function Content({ currentuser }) {
             />
           </span>
         </div>
+        {file && (
+          <div className="shareImgcontainer">
+            <img src={URL.createObjectURL(file)} alt="" className="shareImg" />
+            <span onClick={() => setfile(null)} className="cancel">
+              <i class="fa-solid fa-square-xmark"></i>
+            </span>
+          </div>
+        )}
+
         <form className="addmore" onSubmit={submitHandler}>
           <label htmlFor="file">
             <span className="tomato">

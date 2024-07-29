@@ -67,3 +67,17 @@
   color: green;
   padding-right: 4px;
 }
+.shareImg {
+  margin: 10px;
+  border: 2px solid rgb(236, 9, 9);
+}
+.shareImgcontainer {
+  width: 100%;
+  object-fit: cover;
+}
+.cancel {
+  position: absolute;
+  /* top: 0px; */
+  /* right: 10px; */
+  cursor: pointer;
+}

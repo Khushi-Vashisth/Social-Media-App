@@ -10,7 +10,7 @@ const INITIAL_STATE = {
     password: "$2a$10$sUeqpG4Dnh9.Pke5SpmDMurpbWmMK1bTUgarYdXw6aVDtYgxGLFN.",
     profilePicture: "/assets/kiki.jpg",
     coverPicture: "",
-    followers: [],
+    followers: Array(1),
     following: Array(3),
     desc: "Hello Guys! :) ",
     city: "Panipat (HR)",
