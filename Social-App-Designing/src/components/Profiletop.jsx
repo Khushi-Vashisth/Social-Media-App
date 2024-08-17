@@ -8,7 +8,7 @@ const ProfileTop = ({ User }) => {
   const [user, setUser] = useState({});
   const { username } = useParams();
   const { user: context_user } = useContext(AuthContext);
-  console.log(User, params);
+  console.log(User);
 
   useEffect(() => {
     const fetchUsers = async () => {
