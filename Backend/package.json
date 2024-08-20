@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "kiki": "nodemon index.js"
+    "kiki": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "khushi",
   "license": "ISC",
