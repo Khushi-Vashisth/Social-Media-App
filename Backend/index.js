@@ -13,7 +13,7 @@ const path = require("path");
 dotenv.config(); // Load environment variables
 
 const app = express();
-const port = 8000;
+const port = 8000 || process.env.PORT;
 app.use(cors());
 const connectDB = async () => {
   try {
