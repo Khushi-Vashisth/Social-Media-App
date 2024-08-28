@@ -3,19 +3,7 @@ import AuthReducer from "./auth.reducer";
 import React from "react";
 
 const INITIAL_STATE = {
-  user: {
-    _id: "",
-    username: "",
-    email: "",
-    password: "",
-    profilePicture: "",
-    coverPicture: "",
-    followers: [],
-    following: [],
-    desc: " ",
-    city: "",
-    relationship: "",
-  },
+  user: null,
   isFetching: false,
   error: false,
 };
