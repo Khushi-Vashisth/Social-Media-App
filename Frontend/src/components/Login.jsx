@@ -52,8 +52,8 @@ function Login() {
             ref={password}
             required
           />
-          <button className="button" type="submit" disabled={isFetching}>
-            {isFetching ? "loading" : "Log in"}
+          <button className="button" type="submit">
+            Log in
           </button>
 
           <h5 className="forget">Forget Password ?</h5>

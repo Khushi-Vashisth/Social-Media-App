@@ -31,7 +31,9 @@ function Register() {
         password: password.current.value,
       };
       try {
-        await axios.post("http://localhost:8000/auth/user/register", user);
+        const ApiUrl = import.meta.env.VITE_API_URL;
+
+        await axios.post(ApiUrl + "auth/user/register", user);
         return navigate("/login", { replace: true });
       } catch (err) {
         console.log(err);

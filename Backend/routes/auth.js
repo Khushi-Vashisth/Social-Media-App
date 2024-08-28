@@ -37,7 +37,7 @@ route.post("/login", async (req, res) => {
       req.body.password,
       user.password
     );
-    if (!isValidPassword) return res.status(400).send("Invalid password");
+    if (!isValidPassword) return res.status(400).send("Invalid details");
 
     //Login Successful
     return res.status(200).send(user);

@@ -12,7 +12,7 @@ const ProfileRight = ({ user }) => {
         const ApiUrl = import.meta.env.VITE_API_URL;
         const friendList = await axios.get(`${ApiUrl}user/friends/${user._id}`);
         setfriends(friendList.data);
-        console.log(friendList.data, "friend data");
+        // console.log(friendList.data, "friend data");
       } catch (err) {
         console.log(err);
       }
